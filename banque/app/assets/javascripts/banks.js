@@ -6,9 +6,20 @@ var Bank = {
     $('.deposit-form').show();
   },
 
+  renderAddAccountForm: function(){
+    $('#accounts-balance').hide();
+    $('.add-account-form').show();
+  },
+
   completeDeposit: function(){
     $('#accounts-balance').show();
     $('.deposit-form').hide();
+    Bank.loadAccounts();
+  },
+
+  completeAddAccount: function(){
+    $('#accounts-balance').show();
+    $('.add-account-form').hide();
     Bank.loadAccounts();
   },
 
@@ -39,6 +50,7 @@ var Bank = {
     var that = this;
     $('#deposit-button').on('click', that.renderDepositForm);
     // $('.submit-deposit').on('click', that.completeDeposit);
+    $('#add-account').on('click', that.renderAddAccountForm);
   }
 };
 

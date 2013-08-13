@@ -1,0 +1,6 @@
+<%= form_tag add_account_path, :remote => true, :class => 'add-account-form' do %>
+  <h3>Add Account</h3>
+  Account Name</br><%= text_field_tag :name, params[:name] %>
+  <br>Amount</br><%= text_field_tag :amount, params[:amount] %>
+  <br><%= submit_tag value = "Add account", :class => 'submit-add-account' %>
+<% end %>
