@@ -1,0 +1,45 @@
+<h1>Banque</h1>
+<div id="accounts-balance">
+
+  <div id="accounts">
+    <table cellspacing='5'>
+      <thead></thead>
+      <tbody class="account-table">
+        <tr>
+          <td>Account</td>
+          <td class="table-info">Balance</td>
+        </tr>
+        <% @accounts.each do |account| %>
+          <tr class="individual-accounts">
+            <td class="table-type"> <%= account.name %> </td>
+            <td class="table-info"> $<%= account.balance %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <button id="withdraws-transfers">Withdraws/Transfers</button>
+    </br>
+    <button id="add-account">Add account</button>
+  </div>
+
+  <div id="balance">
+    <table cellspacing='5'>
+      <tr>
+        <td class="table-type">Total Balance</td>
+      </tr>
+      <tr id="total-balance">
+        <td class="table-info" id="total-balance-float">
+          <% @total_balance = 0 %>
+          <% @accounts.each do |account| %>
+            <% @total_balance += account.balance %>
+          <% end %>
+          $<%= @total_balance %>
+        </td>
+      </tr>
+    </table>
+    <button id="deposit-button">Deposit</button>
+  </div>
+
+</div>
+
+<%= render 'deposit' %>

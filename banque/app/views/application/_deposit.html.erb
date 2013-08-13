@@ -1,0 +1,5 @@
+<%= form_tag deposit_path, :remote => true, :class => 'deposit-form' do %>
+  Account</br><%=  select_tag 'account_id', options_for_select(@accounts.collect{ |u| [u.name, u.id] })%>
+  <br>Amount</br><%= text_field_tag :amount, params[:amount] %>
+  <br><%= submit_tag value = "Deposit", :class => 'submit-deposit' %>
+<% end %>

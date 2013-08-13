@@ -1,0 +1,47 @@
+#accounts {
+  float: left;
+}
+
+#balance {
+  padding: 250px;
+}
+
+.table-type {
+  font-family: "Crafty Girls", Helvetica, sans-serif;;
+  color: #E86850;
+  font-weight: bold;
+}
+
+.table-info {
+  padding-right: 20px;
+  padding-left: 30px;
+}
+
+#accounts {
+  width: 30%;
+  height: auto;
+  background-color:#ededed;
+  border-radius: 6px;
+  color:#777777;
+  font-family:arial;
+  text-shadow:1px 1px 0px #ffffff;
+  padding-top: 10px;
+  font-size: 15px
+}
+
+#balance {
+  width: 30%;
+  height: auto;
+  background-color:#ededed;
+  border-radius: 6px;
+  color:#777777;
+  font-family:arial;
+  text-shadow:1px 1px 0px #ffffff;
+  padding-top: 10px;
+  font-size: 15px
+}
+
+.deposit-form {
+  float: left;
+  display: none;
+}
